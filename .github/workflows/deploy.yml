@@ -1,33 +1,33 @@
 name: DenoDeploy
 
 on:
-    push:
-      branches:
-        - main
-    pull_request:
-      branches:
-        - main
-  
-  jobs:
-    deploy:
-      name: Deploy
-      runs-on: ubuntu-latest
-      permissions:
-        id-token: write
-        contents: read
-      steps:
-        - uses: actions/checkout@v3
-        - run: corepack enable
-        - uses: actions/setup-node@v3
-          with:
-            node-version: 18
-        - run: npm install
-        - run: npm run build
-          env:
-            NITRO_PRESET: deno_deploy
-        - name: Deploy to Deno Deploy
-          uses: denoland/deployctl@v1
-          with:
-            project: 373
-            entrypoint: server/index.ts
-            root: .output
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      contents: read
+    steps:
+      - uses: actions/checkout@v3
+      - run: corepack enable
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - run: npm install
+      - run: npm run build
+        env:
+          NITRO_PRESET: deno_deploy
+      - name: Deploy to Deno Deploy
+        uses: denoland/deployctl@v1
+        with:
+          project: 373
+          entrypoint: server/index.ts
+          root: .output
