@@ -1,5 +1,3 @@
-import { colors } from "/flexoki-tailwind-colors.ts";
-
 /** @type {import('tailwindcss').Config} */
 
 export default {
