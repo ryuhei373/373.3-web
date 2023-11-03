@@ -4,7 +4,7 @@
       <nuxt-link to="/" class="mb-4 flex items-center font-medium text-orange md:mb-0">
         <img src="https://github.com/ryuhei373.png" width="32" height="32" alt="ryuhei373"
           class="mr-3 inline-block rounded-full">
-        <span class="text-xl font-bold">ryuhei373</span>
+        <span class="text-xl font-bold">373.3</span>
       </nuxt-link>
     </header>
     <div>
