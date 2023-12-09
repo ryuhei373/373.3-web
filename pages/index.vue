@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import type { QueryBuilderParams } from '@nuxt/content/dist/runtime/types'
+const query: QueryBuilderParams = { path: '/blog', sort: [{ articleId: -1 }] }
 </script>
 
 <template>
@@ -21,10 +23,10 @@
         </ul>
     </div>
     <div class="mt-8">
-        <ContentList path="/blog" v-slot="{ list }">
+        <ContentList :query="query" v-slot="{ list }">
             <div class="-my-8 divide-y divide-base-100">
                 <div v-for="article in list" :key="article._path" class="py-8 flex flex-wrap md:flex-nowrap">
-                    <NuxtLink :to="article._path" class="md:flex-grow">
+                    <NuxtLink :to="article._path" class="w-full">
                         <h2 class="text-xl font-bold text-base-900">
                             {{ article.title }}
                         </h2>
