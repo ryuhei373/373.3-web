@@ -16,7 +16,7 @@ useSeoMeta({
 </script>
 
 <template>
-  <div class="container mx-auto max-w-screen-md p-4 md:px-0">
+  <div class="container mx-auto max-w-screen-sm p-4 md:px-0">
     <!-- Markup shared across all pages, ex: NavBar -->
     <AppHeader />
     <NuxtPage />

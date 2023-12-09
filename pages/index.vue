@@ -24,7 +24,7 @@
         <ContentList path="/blog" v-slot="{ list }">
             <div class="-my-8 divide-y divide-base-100">
                 <div v-for="article in list" :key="article._path" class="py-8 flex flex-wrap md:flex-nowrap">
-                    <NuxtLink :to="article._path" class="md:flex-grow">
+                    <NuxtLink :to="article._path" class="w-full">
                         <h2 class="text-xl font-bold text-base-900">
                             {{ article.title }}
                         </h2>
