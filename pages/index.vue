@@ -27,7 +27,7 @@ const query: QueryBuilderParams = { path: '/blog', sort: [{ articleId: -1 }] }
             <div class="-my-8 divide-y divide-base-100">
                 <div v-for="article in list" :key="article._path" class="py-8 flex flex-wrap md:flex-nowrap">
                     <NuxtLink :to="article._path" class="w-full">
-                        <h2 class="text-xl font-bold text-base-900">
+                        <h2 class="text-xl font-bold text-base-black">
                             {{ article.title }}
                         </h2>
                         <PostedDate :created-at="article.createdAt" />
