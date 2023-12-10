@@ -31,18 +31,16 @@ const query: QueryBuilderParams = { path: '/blog', sort: [{ articleId: -1 }] }
                             {{ article.title }}
                         </h2>
                         <PostedDate :created-at="article.createdAt" />
-                        <div class="leading-relaxed">
-                            <p>
-                                {{ article.description }}
-                            </p>
-                            <div class="text-orange hover:text-orange-light flex items-center justify-end mt-4 gap-2">
-                                <span>Read More</span>
-                                <svg class="w-4 h-4" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"
-                                    stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M5 12h14"></path>
-                                    <path d="M12 5l7 7-7 7"></path>
-                                </svg>
-                            </div>
+                        <p class="pt-4 text-sm leading-loose">
+                            {{ article.description }}
+                        </p>
+                        <div class="text-orange hover:text-orange-light flex items-center justify-end mt-4 gap-2">
+                            <span>Read More</span>
+                            <svg class="w-4 h-4" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M5 12h14"></path>
+                                <path d="M12 5l7 7-7 7"></path>
+                            </svg>
                         </div>
                     </NuxtLink>
                 </div>
