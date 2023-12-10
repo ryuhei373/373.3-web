@@ -48,4 +48,3 @@ const query: QueryBuilderParams = { path: '/blog', sort: [{ articleId: -1 }] }
         </ContentList>
     </div>
 </template>
-  
