@@ -27,22 +27,20 @@ const query: QueryBuilderParams = { path: '/blog', sort: [{ articleId: -1 }] }
             <div class="-my-8 divide-y divide-base-100">
                 <div v-for="article in list" :key="article._path" class="py-8 flex flex-wrap md:flex-nowrap">
                     <NuxtLink :to="article._path" class="w-full">
-                        <h2 class="text-xl font-bold text-base-900">
+                        <h2 class="text-xl font-bold text-base-black">
                             {{ article.title }}
                         </h2>
                         <PostedDate :created-at="article.createdAt" />
-                        <div class="leading-relaxed">
-                            <p>
-                                {{ article.description }}
-                            </p>
-                            <div class="text-orange hover:text-orange-light flex items-center justify-end mt-4 gap-2">
-                                <span>Read More</span>
-                                <svg class="w-4 h-4" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"
-                                    stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M5 12h14"></path>
-                                    <path d="M12 5l7 7-7 7"></path>
-                                </svg>
-                            </div>
+                        <p class="pt-4 text-sm leading-loose">
+                            {{ article.description }}
+                        </p>
+                        <div class="text-orange hover:text-orange-light flex items-center justify-end mt-4 gap-2">
+                            <span>Read More</span>
+                            <svg class="w-4 h-4" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M5 12h14"></path>
+                                <path d="M12 5l7 7-7 7"></path>
+                            </svg>
                         </div>
                     </NuxtLink>
                 </div>
@@ -50,4 +48,3 @@ const query: QueryBuilderParams = { path: '/blog', sort: [{ articleId: -1 }] }
         </ContentList>
     </div>
 </template>
-  

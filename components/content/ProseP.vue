@@ -1,5 +1,5 @@
 <template>
-    <p class="leading-relaxed mb-4">
+    <p class="leading-loose mb-4">
         <slot />
     </p>
 </template>
