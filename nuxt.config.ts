@@ -1,7 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  modules: ["@nuxtjs/tailwindcss", "@nuxt/content"],
+  modules: ["@nuxtjs/tailwindcss", "@nuxt/content", "@vueuse/nuxt"],
   app: {
     head: {
       htmlAttrs: { lang: "ja", prefix: "og: <https://ogp.me/ns#>" },
