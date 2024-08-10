@@ -1,24 +1,28 @@
 <script setup lang="ts">
 import type { QueryBuilderParams } from '@nuxt/content/dist/runtime/types'
+
+type SNSLink = {
+    name: string
+    text: string
+    url: string
+}
+
 const query: QueryBuilderParams = { path: '/blog', sort: [{ articleId: -1 }] }
+
+const snsLinks: SNSLink[] = [
+    { name: 'X', text: '@373_3', url: 'https://x.com/373_3' },
+    { name: 'Bluesky', text: '@373.3-mina.me', url: 'https://bsky.app/profile/373.3-mina.me' },
+    { name: 'Github', text: '@ryuhei373', url: 'https://github.com/ryuhei373' },
+]
 </script>
 
 <template>
     <div class="mt-8">
-        <ul class="list-none">
+        <ul v-for="snslink in snsLinks" :key="snslink.name" class="list-none">
             <li>
-                <a href="https://twitter.com/home" target="_blank"
-                    class="text-orange hover:underline hover:text-orange-light">@373_3</a> (X)
-            </li>
-            <li>
-                <a href="https://bsky.app/profile/373.bsky.social" target="_blank"
-                    class="text-orange hover:underline hover:text-orange-light">@373.bsky.social</a>
-                (Bluesky)
-            </li>
-            <li>
-                <a href="https://github.com/ryuhei373" target="_blank"
-                    class="text-orange hover:underline hover:text-orange-light">@ryuhei373</a>
-                (Github)
+                <a :href="snslink.url" target="_blank" class="text-orange hover:underline hover:text-orange-light">
+                    {{ snslink.text }}
+                </a> ({{ snslink.name }})
             </li>
         </ul>
     </div>

@@ -1,6 +1,6 @@
 export default defineEventHandler(async (event) => {
   const query = getQuery(event);
-  console.log(query);
+
   const photoPageHtmlString = await $fetch(query.src);
   const photoUrl = getPhotoUrl(photoPageHtmlString);
 
