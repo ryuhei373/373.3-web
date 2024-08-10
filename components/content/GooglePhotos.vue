@@ -1,5 +1,5 @@
 <template>
-    <p v-if="pending">Loading...</p>
+    <p v-if="status === 'pending'">Loading...</p>
     <figure v-else>
         <img v-if="data" :src="data.photoUrl" :alt="alt" :title="title">
         <figcaption class="text-sm text-base-600" v-if="caption">{{ caption }}</figcaption>
@@ -28,5 +28,5 @@ const props = defineProps({
     }
 })
 
-const { pending, data } = await useLazyFetch('/api/photos', { query: { src: props.src } })
+const { status, data } = await useLazyFetch('/api/photos', { query: { src: props.src } })
 </script>
