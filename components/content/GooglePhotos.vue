@@ -27,6 +27,6 @@ const props = defineProps({
     }
 })
 
-const res = await $fetch('/api/photos', { query: { src: props.src } })
-const photoUrl = res.photoUrl
+const res = await useFetch('/api/photos', { query: { src: props.src }, lazy: true })
+const photoUrl = res.data.value.photoUrl
 </script>
