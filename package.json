@@ -1,5 +1,5 @@
 {
-  "name": "nuxt-app",
+  "name": "373.3-web",
   "private": true,
   "type": "module",
   "scripts": {
@@ -11,6 +11,7 @@
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
+    "@nuxt/image": "^1.7.0",
     "@nuxtjs/tailwindcss": "^6.8.1",
     "nuxt": "^3.8.0",
     "vue": "^3.3.7",
