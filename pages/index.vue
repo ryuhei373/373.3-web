@@ -7,7 +7,7 @@ type SNSLink = {
     url: string
 }
 
-const query: QueryBuilderParams = { path: '/blog', sort: [{ articleId: -1 }] }
+const query: QueryBuilderParams = { path: '/blog', sort: [{ createdAt: -1 }] }
 
 const snsLinks: SNSLink[] = [
     { name: 'X', text: '@373_3', url: 'https://x.com/373_3' },
@@ -35,7 +35,7 @@ const snsLinks: SNSLink[] = [
                             {{ article.title }}
                         </h2>
                         <PostedDate :created-at="article.createdAt" />
-                        <p class="pt-4 text-sm leading-loose">
+                        <p class="pt-4 text-sm leading-loose text-base-600">
                             {{ article.description }}
                         </p>
                         <div class="text-orange hover:text-orange-light flex items-center justify-end mt-4 gap-2">
