@@ -7,7 +7,15 @@ export default defineNuxtConfig({
       htmlAttrs: { lang: "ja", prefix: "og: <https://ogp.me/ns#>" },
     },
   },
+  nitro: {
+    prerender: {
+      routes: ["/rss.xml"],
+    },
+  },
   content: {
     contentHead: false,
+    highlight: {
+      theme: "github-light",
+    },
   },
 });
