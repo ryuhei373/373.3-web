@@ -39,5 +39,7 @@ export default defineEventHandler(async (event) => {
     });
   });
 
+  setHeader(event, "content-type", "text/xml");
+
   return feed.rss2();
 });
