@@ -13,6 +13,17 @@ useSeoMeta({
   ogLocale: 'ja_JP',
   ogUrl: 'https://373.deno.dev/'
 });
+
+useHead({
+  link: [
+    {
+      rel: "alternate",
+      type: "application/rss+xml",
+      title: "373.3",
+      href: "https://373.3-mina.me/rss.xml"
+    }
+  ]
+})
 </script>
 
 <template>
