@@ -1,6 +1,6 @@
 <template>
     <pre :class="$props.class"
-        class="bg-base-50 border border-base-100 border-solid mb-4 px-4 py-2 rounded-lg overflow-x-auto text-sm"><slot /></pre>
+        class="bg-base-50 border-base-100 dark:bg-base-850 dark:border-base-700 border border-solid mb-4 px-4 py-2 rounded-lg overflow-x-auto text-sm"><slot /></pre>
 </template>
 
 <script setup lang="ts">

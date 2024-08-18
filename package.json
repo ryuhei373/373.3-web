@@ -19,6 +19,7 @@
   },
   "dependencies": {
     "@nuxt/content": "^2.9.0",
+    "@nuxtjs/color-mode": "^3.4.4",
     "feed": "^4.2.2"
   }
 }

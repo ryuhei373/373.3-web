@@ -20,7 +20,8 @@ const snsLinks: SNSLink[] = [
     <div class="mt-8">
         <ul v-for="snslink in snsLinks" :key="snslink.name" class="list-none">
             <li>
-                <a :href="snslink.url" target="_blank" class="text-orange hover:underline hover:text-orange-light">
+                <a :href="snslink.url" target="_blank"
+                    class="text-orange hover:text-orange-light dark:text-orange-light dark:hover:text-orange hover:underline">
                     {{ snslink.text }}
                 </a> ({{ snslink.name }})
             </li>
@@ -31,14 +32,15 @@ const snsLinks: SNSLink[] = [
             <div class="-my-8 divide-y divide-base-100">
                 <div v-for="article in list" :key="article._path" class="py-8 flex flex-wrap md:flex-nowrap">
                     <NuxtLink :to="article._path" class="w-full">
-                        <h2 class="text-xl font-bold text-base-black">
+                        <h2 class="text-xl font-bold">
                             {{ article.title }}
                         </h2>
                         <PostedDate :created-at="article.createdAt" />
-                        <p class="pt-4 text-sm leading-loose text-base-600">
+                        <p class="pt-4 text-sm leading-loose text-base-600 dark:text-base-500">
                             {{ article.description }}
                         </p>
-                        <div class="text-orange hover:text-orange-light flex items-center justify-end mt-4 gap-2">
+                        <div
+                            class="text-orange hover:text-orange-light dark:text-orange-light dark:hover:text-orange flex items-center justify-end mt-4 gap-2">
                             <span>Read More</span>
                             <svg class="w-4 h-4" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"
                                 stroke-linecap="round" stroke-linejoin="round">

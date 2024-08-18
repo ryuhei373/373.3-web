@@ -38,7 +38,5 @@ useHead({
 html {
   font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
     Roboto, 'Helvetica Neue', Arial, sans-serif;
-  background-color: #FFFCF0;
-  color: #100F0F;
 }
 </style>

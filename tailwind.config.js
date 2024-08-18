@@ -59,4 +59,11 @@ export default {
     },
   },
   plugins: [],
+  darkMode: "class",
+  safelist: [
+    "bg-base-paper",
+    "text-base-black",
+    "dark:bg-base-black",
+    "dark:text-base-200",
+  ],
 };
