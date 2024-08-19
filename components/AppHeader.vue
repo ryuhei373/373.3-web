@@ -1,8 +1,16 @@
 <script setup lang="ts">
 const colorMode = useColorMode()
+const isDark = computed({
+    get() {
+        return colorMode.value === 'dark'
+    },
+    set() {
+        colorMode.preference = colorMode.value === 'dark' ? 'light' : 'dark'
+    }
+})
 
 const toggleTheme = () => {
-    colorMode.preference = colorMode.value === 'dark' ? 'light' : 'dark';
+    isDark.value = !isDark.value
 }
 </script>
 
@@ -15,8 +23,7 @@ const toggleTheme = () => {
             <span class="text-xl font-bold">373.3</span>
         </nuxt-link>
         <button>
-            <img v-if="colorMode.value === 'light'" src="~/assets/PhSunBold.svg" width="24" height="24"
-                @click="toggleTheme" />
+            <img v-if="!isDark" src="~/assets/PhSunBold.svg" width="24" height="24" @click="toggleTheme" />
             <img v-else src="~/assets/PhMoonBold.svg" width="24" height="24" @click="toggleTheme" />
         </button>
     </header>
