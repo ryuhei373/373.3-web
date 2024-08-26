@@ -23,8 +23,9 @@ const toggleTheme = () => {
             <span class="text-xl font-bold">373.3</span>
         </nuxt-link>
         <button>
-            <img v-if="!isDark" src="~/assets/PhSunBold.svg" width="24" height="24" @click="toggleTheme" />
-            <img v-else src="~/assets/PhMoonBold.svg" width="24" height="24" @click="toggleTheme" />
+            <img v-if="!isDark" src="~/assets/PhSunBold.svg" alt="dark mode off" width="24" height="24"
+                @click="toggleTheme" />
+            <img v-else src="~/assets/PhMoonBold.svg" alt="dark mode on" width="24" height="24" @click="toggleTheme" />
         </button>
     </header>
 </template>
