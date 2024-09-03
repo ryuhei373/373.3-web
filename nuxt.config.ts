@@ -26,13 +26,6 @@ export default defineNuxtConfig({
     prerender: {
       routes: ["/rss.xml"],
     },
-    scheduledTasks: {
-      // cron構文で実行間隔を設定
-      "* * * * *": ["hello"],
-    },
-    experimental: {
-      tasks: true,
-    },
   },
 
   content: {
