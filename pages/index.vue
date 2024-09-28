@@ -11,7 +11,7 @@ const query: QueryBuilderParams = { path: '/blog', sort: [{ createdAt: -1 }] }
 
 const snsLinks: SNSLink[] = [
     { name: 'X', text: '@373_3', url: 'https://x.com/373_3' },
-    { name: 'Bluesky', text: '@373.3-mina.me', url: 'https://bsky.app/profile/373.3-mina.me' },
+    { name: 'Bluesky', text: '@ryuhei373.dev', url: 'https://bsky.app/profile/ryuhei373.dev' },
     { name: 'Github', text: '@ryuhei373', url: 'https://github.com/ryuhei373' },
 ]
 </script>
