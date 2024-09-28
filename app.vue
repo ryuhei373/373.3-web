@@ -11,7 +11,7 @@ useSeoMeta({
   ogDescription: 'webアプリケーション開発者。仕事ではフルスタック気味に従事。個人としてはHTMLとCSSが好き。',
   ogImage: 'https://github.com/ryuhei373.png',
   ogLocale: 'ja_JP',
-  ogUrl: 'https://373.deno.dev/'
+  ogUrl: 'https://ryuhei373.dev/'
 });
 
 useHead({
@@ -20,7 +20,7 @@ useHead({
       rel: "alternate",
       type: "application/rss+xml",
       title: "373.3",
-      href: "https://373.3-mina.me/rss.xml"
+      href: "https://ryuhei373.dev/rss.xml"
     }
   ]
 })

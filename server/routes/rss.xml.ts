@@ -1,7 +1,7 @@
 import { Feed } from "feed";
 import { serverQueryContent } from "#content/server";
 
-const basePath = "https://373.3-mina.me";
+const basePath = "https://ryuhei373.dev";
 
 export default defineEventHandler(async (event) => {
   const docs = await serverQueryContent(event, {
