@@ -1,3 +1,3 @@
-# 373.3-web
+# ryuhei373.dev
 
 https://ryuhei373.dev/
